@@ -1,0 +1,41 @@
+<ion-content padding>
+
+  <ion-card>
+
+    <img src="{{currentPhoto}}" />
+
+    <ion-card-content>
+      <ion-card-title>
+        Compartilhe Fotos instantaneas no ALAGA-INFO
+       <br> para as Redes sociais
+      </ion-card-title>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="primary" icon-left (click)="getPhoto('picture')">
+          <ion-icon name='camera'></ion-icon>
+          Captura pela Câmera
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="primary" icon-left (click)="getPhoto('gallery')">
+          <ion-icon name='albums'></ion-icon>
+          Selecione a foto da Galeria
+        </button>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-card>
+  <ion-fab right top>
+    <button ion-fab color="dark"><ion-icon name="md-share"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab (click)="whatsappShare()"><ion-icon name="logo-whatsapp"></ion-icon></button>
+      <button ion-fab (click)="facebookShare()"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab (click)="twitterShare()"><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab (click)="instagramShare()"> <ion-icon name="logo-instagram"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

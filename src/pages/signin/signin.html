@@ -1,0 +1,73 @@
+
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      <ion-icon ios="ios-rainy" md="md-rainy"></ion-icon>  ALAGA-INFO
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="showAlert()" icon-only>
+        <ion-icon color="white" ios="ios-help-circle" md="md-help-circle" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <!-- Formulario para validação -->
+  <form #form="ngForm" novalidate>
+
+    <ion-list>
+
+      <!-- Inserindo email e Senha  -->
+      <ion-item>
+        <ion-label floating><ion-icon ios="ios-person" md="md-person"> E-mail Colaborador</ion-icon></ion-label>
+        <ion-input type="text" name="email" [(ngModel)]="user.email" #email="ngModel" required></ion-input>
+      </ion-item>
+      <ion-item *ngIf="email.errors && (email.dirty || email.touched)" class="text-danger">
+        O campo é obrigatório
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>  <ion-icon ios="ios-lock" md="md-lock">Senha</ion-icon></ion-label>
+        <ion-input type="password" name="password" [(ngModel)]="user.password" #password="ngModel" required></ion-input>
+      </ion-item>
+      <ion-item *ngIf="password.errors && (password.dirty || password.touched)" class="text-danger">
+        O campo é obrigatório
+      </ion-item>
+
+    </ion-list>
+
+    <button ion-button block color="dark" [disabled]="!form.form.valid" (click)="signIn()">
+      Entrar
+    </button>
+  </form>
+  <!-- Para cadastro -->
+  <button color="dark" ion-button block clear (click)="resetPassword()">
+    Esqueci minha senha
+  </button>
+  <button color="dark" ion-button block clear (click)="createAccount()">
+    Criar Conta
+  </button>
+  <br> <br> <br>
+  <ion-card>
+    <ion-card-content>
+
+      Preserve suas Ruas e Avenidas
+      <br>
+      <!-- Add card content here! -->
+      O lixo provoca entupimentos dos bueiros e ramais de drenagem. Lugar de lixo é no lixo!
+      <br>
+      Procure manter-se informado sobre as áreas de risco
+      <br>
+      <ion-icon ios="ios-cloud-done" md="md-cloud-done"></ion-icon> <ion-icon ios="ios-contacts" md="md-contacts"></ion-icon>   <ion-icon ios="ios-thumbs-up" md="md-thumbs-up"></ion-icon>
+    </ion-card-content>
+ </ion-card>
+  <br> <br> <br>
+  <ion-buttons end>
+    <button color="darkblue" ion-button block clear (click)="sobreAPP()">
+       Sobre o Aplicativo
+    </button>
+  </ion-buttons>
+
+</ion-content>

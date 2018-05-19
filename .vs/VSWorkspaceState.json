@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\pages",
+    "\\src\\pages\\foto-social",
+    "\\src\\pages\\home",
+    "\\src\\pages\\info",
+    "\\src\\pages\\preencher",
+    "\\src\\pages\\signin",
+    "\\src\\pages\\usuario"
+  ],
+  "SelectedNode": "\\src\\pages\\usuario\\usuario.html",
+  "PreviewInSolutionExplorer": false
+}

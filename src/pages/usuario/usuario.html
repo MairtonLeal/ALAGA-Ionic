@@ -1,0 +1,63 @@
+
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>
+<ion-icon ios="ios-rainy" md="md-rainy"></ion-icon> ALAGA-INFO Colaboradores
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="infoPerfil()" icon-only>
+        <ion-icon color="white" name="information-circle" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+   
+  <!-- Favor testar esse comando com infomações
+  <ion-list>
+    <ion-item (click)="OpcaoMapa()">
+      <ion-thumbnail item-start>
+        <img src="assests/imgs/m1.png">
+      </ion-thumbnail>
+      <h2>My Neighbor Totoro</h2>
+      <p>Hayao Miyazaki • 1988</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+  </ion-list>
+      -->
+ 
+  <ion-card>
+    <ion-card-header>
+      <ion-title color="primary">Pontos Alagados</ion-title>
+    <button ion-button clear color="primary" (click)="Sair()" outline>
+      <ion-icon color="primary" ios="ios-log-out" md="md-log-out">Sair</ion-icon>
+    </button>
+      <button ion-button clear color="dark" (click)="OpcaoMapa()" outline>
+        <ion-icon color="primary" ios="ios-locate" md="md-locate">Localizar ponto no Mapa</ion-icon>
+      </button>
+      <br>
+      <button ion-button clear  (click)="tirarFoto()" outline>
+        <ion-icon color="primary" ios="ios-camera" md="md-camera">Compartilhe Fotos instantaneamente</ion-icon>
+        </button>
+</ion-card-header>
+
+
+  </ion-card>
+    <ion-list>
+      <ion-item *ngFor="let item of LocalItems | async">
+        <ion-item>
+          {{ item.$value }}
+        </ion-item>
+        <button ion-button color="danger" outline item-end (click)="removeItem(item.$key)"><ion-icon name="trash"></ion-icon></button>
+
+      </ion-item>
+    </ion-list>
+
+
+
+</ion-content>

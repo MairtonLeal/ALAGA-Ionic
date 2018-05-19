@@ -1,0 +1,66 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Preencha os Dados</ion-title>
+    <ion-buttons end>
+    <button color="dark" ion-button block clear (click)="retornar()">
+      <ion-icon icon-right item-end ios="ios-home" md="md-home"></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <form (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label stacked>
+          Data
+          <input type="datetime-local" [(ngModel)]="Data" name="Data">
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>
+          <ion-icon ios="ios-rainy" md="md-rainy"></ion-icon>
+          Estado
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="Estado" name="Estado"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>
+          <ion-icon ios="ios-boat" md="md-boat"></ion-icon>
+          Bairro
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="Bairro" name="bairro">
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label stacked>
+          <ion-icon ios="ios-compass" md="md-compass"></ion-icon>
+          Rua/Avenida
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="Rua" name="rua">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>
+          <ion-icon ios="ios-person" md="md-person"></ion-icon>
+          Nome Colaborador
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="Nome" name="nome"></ion-input>
+      </ion-item>
+
+    </form>
+    
+  </ion-list>
+
+  <button ion-button stacket clear (click)="logForm()">Salvar Ponto</button>
+
+</ion-content>

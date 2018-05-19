@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      <ion-icon ios="ios-rainy" md="md-rainy"></ion-icon>  ALAGA-INFO
+    </ion-title>
+
+
+    <button ion-button clear (click)="voltar()" icon-only>
+      <ion-icon color="#fff" ios="ios-arrow-round-back" md="md-arrow-round-back"></ion-icon>
+    </button>
+
+    <ion-buttons end>
+      <button ion-button clear (click)="AddPonto()" icon-only>
+        <ion-icon color="snow" clear name="ios-pin-outline"></ion-icon>
+      </button>
+
+      <button ion-button clear (click)="navigate(usuario)" icon-only>
+        <ion-icon color="snow" ios="ios-create" md="md-create"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+
+
+  
+
+<ion-content padding>
+
+
+
+  <div #map id="map"></div>
+  
+  
+</ion-content>
